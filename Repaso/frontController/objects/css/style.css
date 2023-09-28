@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body , html{
+    height: 100%;
+    background-image: url(../IMG/fondo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(59, 56, 56);
+    background-blend-mode: soft-light;
+}
+
+header {
+    box-sizing: border-box;
+    display: block;
+    background-color: rgba(27, 38, 44, 0.8);
+}
+
+header>nav>h1{
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+header>nav>h1>a{
+    color: azure;
+    text-decoration-line: none;
+}
+
+header>nav{
+    color: white;
+    text-decoration-line:none ;
+}
+
+header>nav>ul{
+    box-sizing: border-box;
+    width: 20%;
+    float: right;
+}
+
+header>nav>ul>li{
+    height: auto;
+    display: inline-block;
+    list-style: none;
+    padding: 20px;
+}
+
+header>nav>ul>li>a{
+    height: 100%;
+    color: white;
+    text-decoration-line:none ;
+}
+
+main{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    clear: both;
+}
+
+main>h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+main>p{
+    color: rgb(241, 241, 241);
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+footer{
+    color:white;
+    background-color: rgba(27, 38, 44, 0.5);
+    padding: 15px 20px;
+    text-align: center;
+}
