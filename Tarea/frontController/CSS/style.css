@@ -7,8 +7,12 @@
 
 body, html {
     height: 100%;
-    background-color:#F3FDE8;
+    background-color:#edf5e4;
     box-sizing: border-box;
+}
+
+.Logo{
+    width: 20rem;
 }
 
 header {
@@ -22,6 +26,8 @@ header>nav>h1 {
     padding: 13px;
     font-size: 1rem;
     display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
     margin: 0;
 }
 header>nav>h1>a {
@@ -71,21 +77,54 @@ main{
     width: 90%;
     height: 100%;
     clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 main>h1 {
     text-align: center;
     font-size: 3.5rem;
-    margin-top: 15%;
 }
 main>p {
     text-align: center;
 }
 
-.title{
+.card{
+    width: 28rem;
+    background-color: rgba(104, 133, 153, 0.5);
+}
+
+main>.title{
     color: rgb(6, 91, 102);
     text-align: center;
     font-size: 3rem;
+    margin-top: -10rem;
 }
+
+main>hr{
+    color:rgb(6, 91, 102);
+    width: 60rem;
+}
+
+main>.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;    
+}
+
+main>.conDetalle>h1{
+    color: rgb(6, 91, 102);
+}
+
+main>.conDetalle>.card{
+    width: 24rem;
+    padding: 10px;
+    background-color: rgba(104, 133, 153, 0.5);
+}
+
+
 
 footer {
     color: azure;
@@ -93,3 +132,4 @@ footer {
     padding: 15px 20px;
     text-align: center;
 }
+

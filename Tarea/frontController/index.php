@@ -46,7 +46,21 @@ else
 // Si la variable $action es una función la ejecutamos o detenemos el script
 if(method_exists($printController, $action))
   {
-    $printController->$action();
+    if($action == "showCliente"){
+      $id = isset($_GET['id']) ? $_GET['id'] : null;
+      $printController->$action($id);
+    }
+    else if($action === "delete"){
+      $id = isset($_GET['id']) ? $_GET['id'] : null;
+      $printController->$action($id);
+    }
+    else if($action === "editar"){
+      $id = isset($_GET['id']) ? $_GET['id'] : null;
+      $printController->$action($id);
+    }
+     else{
+      $printController->$action();
+     }
   }
 else
   {
