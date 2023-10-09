@@ -36,14 +36,15 @@
                     <?php 
                         $mostrar = BASE_DIR . "Cliente/" . $cliente["id"];
                         $eliminar = BASE_DIR . "Cliente/" . $cliente["id"] . "/delete";
-                        $editarC = BASE_DIR . "Cliente/" . $cliente["id"] . "/editar"
+                        $editarC = BASE_DIR . "Cliente/" . $cliente["id"] . "/edit";
+                        
                      ?>
 
                     <button type="button" class="btn btn-success ">
                        <a style="text-decoration:none; color:white;" href="<?= $mostrar ?>">Ver detalles</a>
                     </button>
                     <button type="button" class="btn btn-warning">
-                    <a style="text-decoration:none; color:white;" href="<?= $editarC ?>"></a>   Actualizar
+                    <a style="text-decoration:none; color:white;" href="<?= $editarC ?>">Actualizar</a>   
                     </button>
                     <button type="button" class="btn btn-danger">
                     <a style="text-decoration:none; color:white;" href="<?= $eliminar ?>">Eliminar</a>

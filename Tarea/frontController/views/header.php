@@ -19,7 +19,7 @@
             
             <ul>
                 <li><a href="<?= BASE_DIR; ?>Home/index/">Home</a></li>
-                <li><a href="<?= BASE_DIR; ?>Cliente/index/">Clientes</a></li>
+                <li><a href="<?= BASE_DIR; ?>Cliente/">Clientes</a></li>
                 <li class="final"><a href="<?= BASE_DIR; ?>Cliente/new/">Registrar</a></li>
             </ul>
         </nav>

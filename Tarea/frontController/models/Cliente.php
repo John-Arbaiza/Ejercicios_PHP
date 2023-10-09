@@ -68,5 +68,27 @@ class CLiente{
         file_put_contents("database.json", json_encode($clientes));
         header('Location: ' . BASE_DIR . 'Cliente/index/');
     }
+
+    public function edit() {
+        $data = file_get_contents(BASE_DIR . "database.json");
+        $clientes = json_decode($data, true);
+
+        for ($i=0; $i < count($clientes["clientes"]) ; $i++){
+            if($clientes["clientes"][$i]["id"] == $_POST["user_id"]){
+                $clientes["clientes"][$i]["id"] = $_POST["user_id"];
+                $clientes["clientes"][$i]["userName"] = $_POST["user"];
+                $clientes["clientes"][$i]["lastName"] = $_POST["apellido"];
+                $clientes["clientes"][$i]["birthdate"] = $_POST["fechaNacim"];
+                $clientes["clientes"][$i]["favoritos"] = isset($_POST["productos"]) ? $_POST["productos"] : array();
+                $clientes["clientes"][$i]["direccionEnv"] = $_POST["envio"];
+            }
+        }
+        file_put_contents("database.json", json_encode($clientes));
+        file_put_contents("database.json", json_encode($clientes));
+        header('Location: ' . BASE_DIR . 'Cliente/');
+    
+
+    }
+    
         
 }    

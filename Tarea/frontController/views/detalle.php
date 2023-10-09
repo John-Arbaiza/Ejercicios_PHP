@@ -5,8 +5,6 @@ foreach ($cliente["favoritos"] as $producto) :
    $productos .= $producto . " ";
 endforeach;
 
-$editar = BASE_DIR . "Cliente/" . $cliente["id"] . "/edit";
-
 echo
      <<<OUPUT
 

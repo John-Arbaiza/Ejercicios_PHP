@@ -124,7 +124,16 @@ main>.conDetalle>.card{
     background-color: rgba(104, 133, 153, 0.5);
 }
 
-
+.producto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+  }
+  
+  .producto-grid > div {
+    display: flex;
+    align-items: center;
+  }
 
 footer {
     color: azure;

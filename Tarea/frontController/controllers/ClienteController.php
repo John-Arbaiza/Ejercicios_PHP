@@ -1,5 +1,4 @@
 <?php
-
 //Definimos nuestra clase ClienteController
 class ClienteController{
 
@@ -42,17 +41,29 @@ class ClienteController{
 
     }
 
+    public function editar($id){
+        require_once "models/Cliente.php";
+        $clientes = new Cliente();
+        $cliente = $clientes->showClientes($id);
+        if($cliente){
+            require_once "views/editar.php";
+      }
+      else{
+          die("<h1>Metodo no definido - 404 Not Found</h1>");
+      } 
+    }
+
+    public function actualizar(){
+        require_once "models/Cliente.php";
+        $clientes = new Cliente();
+        $clientes->edit();
+
+    }
+
     public function delete($id) {
     require_once "models/Cliente.php";
     $clientes = new Cliente();
     $clientes->delete($id);
-   }
-
-   public function editar($id){
-
-    require_once "models/Cliente.php";
-    $cliente = new Cliente();
-
    }
 
 }
