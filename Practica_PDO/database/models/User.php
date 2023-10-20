@@ -34,7 +34,7 @@ class User{
 
             PostgresConnection::connect($host, $port, $dbname, $user, $pass);
             //Consulta para insertar nuevos registros
-            $sql = "INSERT INTO users(username, password, age) VALUES(:username, :password, :age)";
+            $sql = "INSERT INTO users(username, password) VALUES(:username, :password)";
             //Ejecutara la consulta, pasando los datos como parametros
             PostgresConnection::insert($sql, $data);
 
@@ -44,6 +44,60 @@ class User{
             die($e->getMessage());
         }
         finally {   
+            PostgresConnection::close();
+        }
+    }
+    //===================================================================================
+    public function vista($data){
+        require_once "config/configDatabase.php";
+        require_once "database/PostgresConnection.php";
+
+        try {
+            PostgresConnection::connect($host, $port, $dbname, $user, $pass);
+            //Consulta para poder ver un usuario segun sea seleccionado 
+            $users= PostgresConnection::mostrarD("SELECT * FROM users WHERE id = '$data'");
+            return $users;
+        } 
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
+        finally {   
+            PostgresConnection::close();
+        }
+    }
+    //===================================================================================
+    public function delete($data){
+        require_once "config/configDatabase.php";
+        require_once "database/PostgresConnection.php";
+
+        try {
+            PostgresConnection::connect($host, $port, $dbname, $user, $pass);
+            //consulta para eliminar datos 
+            $sql = "DELETE FROM users WHERE id ='$data'";
+            PostgresConnection::eliminarUser($sql);
+
+            header("Location:" . BASE_DIR . "User/index/");
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        finally{
+            PostgresConnection::close();
+        }
+    }
+    //===================================================================================
+    public function actualizar($data){
+        require_once "config/configDatabase.php";
+        require_once "database/PostgresConnection.php";
+    
+        try {
+            PostgresConnection::connect($host, $port, $dbname, $user, $pass);
+            
+            PostgresConnection::actualizando("UPDATE users SET username ='{$data["user_name"]}', password = '{$data["pass"]}' WHERE id = {$data["ID_User"]}");
+            header("Location:" . BASE_DIR . "User/index/");
+        } catch (Exception $e) {
+            die($e->getMessage());
+        } finally {
             PostgresConnection::close();
         }
     }

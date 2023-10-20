@@ -7,8 +7,7 @@ CREATE TABLE users (
 --Se establece un id que se vaya autoincrementando el cual tambien servira como llave primaria--
     id smallserial PRIMARY KEY,
     username varchar(15),
-    password varchar(10),
-    age integer
+    password varchar(10)
 );
 
 --Se agrega una nueva columna llamada 'last_update' de tipo TIMESTAMP a la tabla'users'--

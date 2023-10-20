@@ -8,9 +8,6 @@
             <div class="col">
                 <input class="form-control" type="password" name="pass" placeholder="Password">
             </div>
-            <div class="col">
-                <input class="form-control" type="text" name="edad" placeholder="Edad del usuario">
-            </div>
             <input class="btn btn-success mt-3" type="submit" value="Guardar">
         </div>
     </form>
