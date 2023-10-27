@@ -1,0 +1,19 @@
+a continuacion se birnda lo que de debe ir en el archivo 
+.htaccess en caso de no aparecer a la hora de clonar el repositorio
+
+el archivo .htaccess nos ayuda con las url de nuestro proyecto
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)/(.*)/$ index.php?controller=$1&action=$2
+    RewriteRule ^User/?$ index.php?controller=User&action=index
+    RewriteRule ^User/new/?$ index.php?controller=User&action=new
+
+    #ErrorDocument 404 http://localhost/php/frontController/error/
+
+</IfModule>
