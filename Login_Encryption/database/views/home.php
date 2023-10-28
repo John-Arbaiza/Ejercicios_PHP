@@ -5,7 +5,7 @@
 
         <div class="inicio" style="display:flex; justify-content:center;">
             <button class="btn btn-dark">
-                <a href="<?= BASE_DIR; ?>User/iniciar/" style="text-decoration:none; color:white;">Iniciar session</a>
+                <a href="<?= BASE_DIR; ?>User/botonLogin/" style="text-decoration:none; color:white;">Iniciar session</a>
             </button>
         </div>
         

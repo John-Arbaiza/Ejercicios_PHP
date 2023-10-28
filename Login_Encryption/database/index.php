@@ -1,6 +1,7 @@
 <?php require_once "render/BaseLayout.php";
 require_once "config/configControllers.php";
 BaseLayout::renderHead();
+session_start();
 
 /**************** CONTROLADOR FRONTAL *********************/
 

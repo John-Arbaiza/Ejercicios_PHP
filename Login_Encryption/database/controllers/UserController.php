@@ -6,16 +6,23 @@ class UserController
     {
         require_once "models/User.php";
         $user = new User();
-        $users = $user->index();
-        session_start();
+      /*  session_start();
         if(!isset($_SESSION['ID_User'])){
             header("Location:" . BASE_DIR . "User/iniciar/");
             exit;
         }
         else{
             require_once "views/users.php";
-        }
+        }*/
         //require_once "views/users.php";
+
+        if(!$_SESSION){
+            require_once "views/login.php";
+        }
+
+        $users = $user->index();
+        require_once "views/users.php";
+
   
     }
     //----------------------------------------
@@ -57,10 +64,23 @@ class UserController
         $user->actualizar($_POST);
     }
     //-------------------------------------------
+    //Para lo del inicio de session
     public function iniciar(){
         require_once "models/User.php";
         $user = new User();
-       // $usuario = $user->iniciar($_POST["ID_User"]);
+        $user->iniciar($_POST);
+    }
+    //-------------------------------------------
+    //Para que me envie al login a traves de un button
+    public function botonLogin(){
         require_once "views/login.php";
+    }
+    //-------------------------------------------
+    //para cerrar la session
+    public function cerrarSession(){
+        require_once "models/User.php";
+        session_start();
+        $user = new User();
+        $user-> cerrarSession();
     }
 }

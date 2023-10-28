@@ -46,6 +46,13 @@ class PostgresConnection implements DatabaseConnection{
             );
     }
     //================================================================================
+    //Metodo para el inicio de session
+    public static function iniciar($sql, $data){
+        $stmt = self::$connection->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    //================================================================================
     //Metodo para visualizar un usuario 
     public static function mostrarD($sql){
         $stmt = self::$connection->prepare($sql);

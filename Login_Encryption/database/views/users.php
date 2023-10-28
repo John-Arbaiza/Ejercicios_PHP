@@ -5,8 +5,16 @@
             <th>Usuario</th>
             <th>Password</th>
             <th>Opciones</th>
+            <th>
+                <form action="<?=BASE_DIR?>User/cerrarSession/">
+                <button class="btn btn-danger">Cerrar session </button>
+                </form>
+            
+            </th>
+            
         </tr>
     <?php foreach($users as $user): 
+    //$Sincifrar  = openssl_decrypt($user["password"], "AES-128-CFB", "GeeksforGeeks", 0, "123456789ABCDEFG");
     //Variables a emplear
     $vistaU = BASE_DIR . "User/mostrarD/";
     $eliminar = BASE_DIR . "User/delete/";
@@ -36,6 +44,7 @@
                 </form>
                 </div>
                 </td>
+                <td>-</td>
 
             </tr>
     OUTPUT;
