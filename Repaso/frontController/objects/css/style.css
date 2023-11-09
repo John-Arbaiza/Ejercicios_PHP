@@ -76,6 +76,69 @@ main>p{
     margin-top: 0.5rem;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+}
+
+.card{
+    align-items: center;
+    width: 18rem;
+    margin-top: 1rem;
+    border: solid 1px white;
+    border-radius: 6px;
+    padding: 6px;
+    background-color: rgba(26, 39, 43, 0.6);
+}
+
+.card-body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.card-body>span{
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.card-body>i{
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.card-body>i:hover{
+    cursor: pointer;
+    color: #eba819;
+}
+
+hr{
+    width: 18rem;
+}
+
+.formulario{
+    padding: 10px;
+}
+
+.formulario>input{
+    width: 14rem;
+    height: 20px;
+}
+
+.Ingresar{
+    width: 14rem;
+    height: 1.6rem;
+    background-color: rgb(60, 60, 131);
+    color:white;
+    border: solid 2px white;
+    border-radius: 3px;
+}
+
 footer{
     color:white;
     background-color: rgba(27, 38, 44, 0.5);

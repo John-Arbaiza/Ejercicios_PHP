@@ -1,0 +1,35 @@
+body{
+    background-color:#F1F6F9;
+}
+
+h1{
+    text-align:center;
+    color:#394867;
+}
+
+h2{
+    text-align:center;
+    color:#394867;
+}
+
+.platillos{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    list-style: none;
+}
+
+button{
+    margin:20px;
+    width: 120px;
+    height: 38px;
+    background-color:#212A3E;
+    border: 2px solid #9BA4B5;
+    border-radius:4px;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+  font-weight:bolder;
+}
